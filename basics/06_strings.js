@@ -5,7 +5,7 @@ const repoCount=100
 
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
-const getName=new String('architt-tr')
+const getName=new String('architt-tr-good-man')
 
 console.log(getName[0]);
 console.log(getName.__proto__);
@@ -30,4 +30,6 @@ const url="https://akki.com/archit%20tiwary"
 console.log(url.replace('%20','#'))
 console.log(url.includes('akki'))
 console.log(url.includes('hello'))
-console.log(getName.split('+'))
+
+const words=getName.split("-")
+console.log(words[2]);
