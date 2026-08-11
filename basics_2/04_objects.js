@@ -42,10 +42,45 @@ const users=[  //Array of objects
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+//+++++++++++Destructuring++++++++++++++++++
+
+const course={
+    coursename:"chai aur js",
+    price:"8999",
+    courseInstructor:"hitesh"
+}
+// course.courseInstructor
+
+const {courseInstructor:instructor}=course //Destructuring
+// console.log(courseInstructor);
+console.log(instructor);
+
+// const navbar=({company}) => {
+
+// }
+// navbar(company="akki")//React
+
+//+++++++++++++ API=>basics +++++++++++
+//RandomUser.Me api
+//json formatter
+
+
+// {
+//     "name":"akkki",
+//     "coursename":"js in hindi",
+//     "price":"free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
