@@ -28,7 +28,7 @@ buttons.forEach(function (button) {
 
 ```
 
-## project 2 solution
+## Project-2
 ```javascript
 const form = document.querySelector('form')
 //this usecase will give empty
