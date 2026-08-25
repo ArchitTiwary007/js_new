@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Requests</title>
+</head>
+<body style="background-color: #212122;color: rgb(185, 212, 237);">
+    <h1>XMLHttpRequest</h1>
+     0	UNSENT	Client has been created. open() not called yet.<br>
+1	OPENED	open() has been called.<br>
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.<br>
+3	LOADING	Downloading; responseText holds partial data.<br>
+4	DONE	The operation is complete.<br>
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/ArchitTiwary007'
+    const xhr= new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    xhr.onreadystatechange=function(){    //monitors continuously
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // console.log(this.responseText);//=>For accessing current context!!
+            const data=JSON.parse(this.responseText);//string to json object conversion
+            console.log(data.public_repos);//=>undefined
+        }
+    }
+    xhr.send()//call
+</script>
+</html>
